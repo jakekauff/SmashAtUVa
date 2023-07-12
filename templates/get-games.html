@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<nav class="navigation-bar">
+    <img src="{{url_for('static', filename='smashLogo.png')}}"  style="width:100px;height:75px;"/>
+    <h2>Summer 2023 Games</h2>
+    <a href="/" >Home</a>
+    <a href="/get-tournaments" >League Tournaments</a>
+    <a href="/get-players">Player Information</a>
+    <a href="/get-games">Head-to-Heads</a>
+    <a href="/character">Smash Characters List</a>
+    <a href="/about">About UVa Smash Club</a>
+</nav>
+<head>
+    <link rel="stylesheet" href='/css/main.css' />
+</head>
+<body>
+    <table class="column">
+      <tr>
+        <th>Match Number</th>
+        <th>Tournament</th>
+        <th>Winner</th>
+          <th>Loser</th>
+          <th></th>
+      </tr>
+        {% for i in game %}
+      <tr>
+          <td> {{i[0]}}</td>
+          <td> <a href="/tournament/{{i[5]}}">Tournament {{i[4]}}  </a></td>
+          <td> {{i[2]}}</td>
+          <td> {{i[3]}}</td>
+          <td><a href="/tournament/{{i[0]}}">More Info.</a></td>
+      </tr>
+
+        {% endfor %}
+
+    </table>
+
+</body>
+</html>

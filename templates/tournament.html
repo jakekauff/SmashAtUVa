@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<nav class="navigation-bar">
+    <img src="{{url_for('static', filename='smashLogo.png')}}"  style="width:100px;height:75px;"/>
+    <h2>Tournament <b>{{tournament_info[0]}}</b> Information:</h2>
+</nav>
+<head>
+    <link rel="stylesheet" href='/css/main.css' />
+</head>
+<body>
+
+    <br/>
+    Tournament Date: {{tournament_info[1]}}
+    <br/>
+    Tournament Location: {{tournament_info[3]}}
+    <br/>
+    Top 3 Players:
+    <ol>
+        <li><a href="/player/{{tournament_info[4]}}">{{tournament_info[4]}} </a> </li>
+        <li><a href="/player/{{tournament_info[5]}}">{{tournament_info[5]}} </a> </li>
+        <li><a href="/player/{{tournament_info[6]}}">{{tournament_info[6]}} </a> </li>
+    </ol>
+    <br/>
+    Players in Attendance:
+    <ol>
+        {% for i in attendance %}
+            <li><a href="http://127.0.0.1:5000/player/{{i[0]}}">{{i[0]}}</a></li>
+        {% endfor %}
+    <br/>
+    Tournament Organizer Information: %TODO
+        <hr/>
+</body>
+</html>

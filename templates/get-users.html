@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href='/css/main.css' />
+</head>
+<body>
+    <h2>List of all tournaments in the Summer 2023 Season</h2>
+    <br/>
+    {% for i in users %}
+        <a href="/user/{{i[0]}}">{{i[1]}}</a>
+        <hr/>
+    {% endfor %}
+</body>
+</html>

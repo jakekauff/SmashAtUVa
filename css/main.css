@@ -1,0 +1,96 @@
+body {
+  background: White;
+  margin-top: 50px;
+  margin-left: 100px;
+  }
+
+h1 {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 2.5em;
+  color: #232D4B;
+  }
+
+h2 {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 1.75em;
+  color: White;
+  }
+
+p {
+  font-family: Georgia, serif;
+  font-size: 1.2em;
+  color: #232D4B;
+  }
+
+ body {
+  color: #232D4B;
+}
+
+tr:hover {
+    background-color: #E57200;
+    }
+
+th, td {
+  border-color: black;
+}
+table, th, td {
+  border: 1px solid;
+}
+
+
+th {
+  color: black;
+}
+
+.navigation-bar {
+    width: 100%;  /* i'm assuming full width */
+    height: 80px; /* change it to desired width */
+    background-color: #232D4B; /* change to desired color */
+}
+
+.logo {
+    display: inline-block;
+    vertical-align: top;
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+    margin-top: 15px;    /* if you want it vertically middle of the navbar. */
+}
+.navigation-bar > h2 {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 20px;
+    height: 80px;        /* if you want it to take the full height of the bar */
+    line-height: 40px;    /* if you want it vertically middle of the navbar */
+}
+
+.navigation-bar > a {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 20px;
+    height: 40px;        /* if you want it to take the full height of the bar */
+    line-height: 80px;    /* if you want it vertically middle of the navbar */
+    color: White;
+}
+
+
+
+.footer {
+  background-color: #F1F1F1;
+  text-align: center;
+  padding: 10px;
+}
+
+h2 > a {
+    color: White;
+}
+
+html {
+    display: table;
+    margin: auto;
+}
+
+body {
+    display: table-cell;
+    vertical-align: middle;
+}

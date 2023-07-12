@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href='/css/main.css' />
+</head>
+<nav class="navigation-bar">
+    <img src="{{url_for('static', filename='smashLogo.png')}}"  style="width:100px;height:75px;"/>
+     <h2>Player Information for <b>{{player_info[0]}} {{player_info[2]}}</b> </h2>
+</nav>
+<body>
+
+    <br/>
+    <h3> Player Email: </h3> {{player_info[3]}}
+    <br/>
+    <h3>Player Year: </h3>{{player_info[4]}}
+    <br/>
+    <h3>Player Character:</h3> {{characters[1]}}
+        <a href="http://127.0.0.1:5000/character/{{characters[0]}}">{{characters[1]}} </a>
+    <br/>
+    <h3>Tournaments attended by {{player_info[0]}}:</h3>
+    <ol>
+        {% for i in attendance %}
+            <li><a href="http://127.0.0.1:5000/tournament/{{i[0]}}">Tournament #{{i[0]}} </a></li>
+        {% endfor %}
+    </ol>
+    <h3>Head-to-Heads played in by {{player_info[0]}}:</h3>
+    <h4>Wins:</h4>
+    <ol>
+    {% for i in wins %}
+        <li><a href="game/{{i[0]}}"> Game {{i[0]}}</a></li>
+    {% endfor %}
+    </ol>
+     <h4>Losses:</h4>
+    <ol>
+    {% for i in losses %}
+        <li><a href="game/{{i[0]}}"> Game {{i[0]}}</a></li>
+    {% endfor %}
+    </ol>
+    <br/>
+        <hr/>
+</body>
+</html>

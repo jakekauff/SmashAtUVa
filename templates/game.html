@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game {{game_info[0]}}</title>
+    <link rel="stylesheet" href='/css/main.css' />
+</head>
+<nav class="navigation-bar">
+    <img src="{{url_for('static', filename='smashLogo.png')}}"  style="width:100px;height:75px;"/>
+    <h2>Game <b>{{game_info[0]}}</b> Information:</h2>
+</nav>
+<body>
+    <br/>
+    <h3>Game Duration: </h3>{{game_info[1]}}
+    <h3>Game Winner:</h3> <a href="/player/{{game_info[2]}}"> {{game_info[3]}}  </a>
+    <h3>Game Loser: </h3> <a href="/player/{{game_info[3]}}"> {{game_info[4]}}  </a>
+    <h3>Game Tournament:</h3> <a href="/tournament/{{game_info[4]}}">Tournament {{game_info[4]}}  </a>
+    <br/>
+</body>
+</html>

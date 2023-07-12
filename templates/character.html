@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<nav class="navigation-bar">
+    <img src="{{url_for('static', filename='smashLogo.png')}}"  style="width:100px;height:75px;"/>
+    <h2> Characters</h2>
+    <a href="/" >Home</a>
+    <a href="/get-tournaments" >League Tournaments</a>
+    <a href="/get-players">Player Information</a>
+    <a href="/get-games">Head-to-Heads</a>
+    <a href="/character">Smash Characters List</a>
+    <a href="/about">About UVa Smash Club</a>
+</nav>
+<head>
+    <meta charset="UTF-8">
+    <title>Characters</title>
+    <link rel="stylesheet" href='/css/main.css' />
+</head>
+<body>
+<table>
+      <tr>
+        <th>Name</th>
+        <th>Icon</th>
+      </tr>
+        {% for i in character %}
+      <tr>
+          <td> {{i[0][1]}}</td>
+          <td><img src={{i[1]}} style="width:30px;height:30px;"> </td>
+      </tr>
+
+        {% endfor %}
+
+    </table>
+
+</body>
+</html>
