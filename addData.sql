@@ -36,7 +36,7 @@ VALUES ('aw5pr', 'Ava','West','ava22',2,8);
 INSERT INTO player
 VALUES ('np8rq', 'Noah','Price','noah',3,9);
 INSERT INTO player
-VALUES ('joan', 'Joan','Darwin','jd5tp',3,10);
+VALUES ('jd5tp', 'Joan','Darwin','joan1234',3,10);
 
 -- Table: game
 INSERT INTO game 
