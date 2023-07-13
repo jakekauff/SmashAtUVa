@@ -30,19 +30,24 @@ def class_(TourneyNum):
 
     cursor_obj.execute(f"SELECT * FROM tournament INNER JOIN club_officer ON tournament.OfficerID = club_officer.OfficerID WHERE TourneyNum = {TourneyNum}")
     tournament_info = cursor_obj.fetchone()
-
+    ranks = []
+    for i in range(4,7):
+        cursor_obj.execute(f"SELECT FirstName, LastName FROM player WHERE ComputingID = \"{tournament_info[i]}\"")
+        playerName = cursor_obj.fetchone()
+        ranks.append(playerName)
     cursor_obj.execute(f"SELECT ComputingID FROM player_attendance WHERE TourneyNum = {TourneyNum}")
     attendance = cursor_obj.fetchall()
-
-    print(tournament_info[7])
-
-
+    attendanceNames = []
+    for i in attendance:
+        cursor_obj.execute(f"SELECT ComputingID, FirstName, LastName FROM player WHERE ComputingID = \"{i[0]}\"")
+        playerName = cursor_obj.fetchone()
+        attendanceNames.append(playerName)
     if tournament_info is None:
         return "Tournament not found"
 
     connection_obj.close()
 
-    return render_template("tournament.html", tournament_info=tournament_info, attendance=attendance)#, users=users)
+    return render_template("tournament.html", tournament_info=tournament_info, attendance=attendanceNames, ranks=ranks)#, users=users)
 @app.route("/get-players")
 def get_players():
     connection_obj = sqlite3.connect('project.db')
@@ -109,6 +114,7 @@ def tournamentplayer_(PlayerID):
     cursor_obj = connection_obj.cursor()
 
     cursor_obj.execute(f"SELECT * FROM player WHERE ComputingID = \"{PlayerID}\" LIMIT 1")
+
     player_info = cursor_obj.fetchone()
 
     if player_info is None:
@@ -176,13 +182,20 @@ def game_(GameID):
     cursor_obj.execute(f"SELECT * FROM game WHERE GameID = {GameID} LIMIT 1")
     game_info = cursor_obj.fetchone()
 
+    winnerID = game_info[2]
+    loserID = game_info[3]
+    cursor_obj.execute(f"SELECT FirstName, LastName FROM player WHERE ComputingID = \"{winnerID}\" LIMIT 1")
+    winner_info = cursor_obj.fetchone()
+    cursor_obj.execute(f"SELECT FirstName, LastName FROM player WHERE ComputingID = \"{loserID}\" LIMIT 1")
+    loser_info = cursor_obj.fetchone()
+
     if game_info is None:
         return "Tournament not found"
 
 
     connection_obj.close()
 
-    return render_template("game.html", game_info=game_info)
+    return render_template("game.html", game_info=game_info, winner=winner_info, loser=loser_info)
 @app.route("/player/game/<int:GameID>")
 def playergame_(GameID):
     connection_obj = sqlite3.connect('project.db')

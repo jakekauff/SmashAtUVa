@@ -42,7 +42,7 @@ VALUES ('jd5tp', 'Joan','Darwin','joan1234',3,10);
 INSERT INTO game 
 VALUES (123, 60, 'jtg8se','eh2vu',1);
 INSERT INTO game 
-VALUES (124, 60, 'joan','sh3rt',1);
+VALUES (124, 60, 'jd5tp','sh3rt',1);
 INSERT INTO game 
 VALUES (125, 60, 'jtg8se','jd5tp',2);
 
@@ -90,13 +90,13 @@ VALUES (1, 'aw5pr',1);
 INSERT INTO player_attendance
 VALUES (2, 'jtg8se',1);
 INSERT INTO player_attendance
-VALUES (3, 'joan',1);
+VALUES (3, 'jd5tp',1);
 INSERT INTO player_attendance
 VALUES (4, 'aw5pr',2);
 INSERT INTO player_attendance
 VALUES (5, 'jtg8se',2);
 INSERT INTO player_attendance
-VALUES (6, 'joan',2);
+VALUES (6, 'jd5tp',2);
 
 INSERT INTO player_attendance
 VALUES (7, 'sg2vp', 1);

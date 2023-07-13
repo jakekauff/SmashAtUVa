@@ -20,17 +20,17 @@
     <br/>
     Tournament Location: {{tournament_info[3]}}
     <br/>
-    <h4 >Top 3 Players:</h4>
+    <h4>Top 3 Players:</h4>
     <ol>
-        <li><a href="/player/{{tournament_info[4]}}">{{tournament_info[4]}} </a> </li>
-        <li><a href="/player/{{tournament_info[5]}}">{{tournament_info[5]}} </a> </li>
-        <li><a href="/player/{{tournament_info[6]}}">{{tournament_info[6]}} </a> </li>
+        <li><a href="/player/{{tournament_info[4]}}">{{ranks[0][0]}} {{ranks[0][1]}} </a> </li>
+        <li><a href="/player/{{tournament_info[5]}}">{{ranks[1][0]}} {{ranks[1][1]}} </a> </li>
+        <li><a href="/player/{{tournament_info[6]}}">{{ranks[2][0]}} {{ranks[2][1]}}</a> </li>
     </ol>
   <hr/>
     <h4>Players in Attendance:</h4>
     <ol>
         {% for i in attendance %}
-            <li><a href="http://127.0.0.1:5000/player/{{i[0]}}">{{i[0]}}</a></li>
+            <li><a href="http://127.0.0.1:5000/player/{{i[0]}}">{{i[1]}} {{i[2]}}</a></li>
         {% endfor %}
     </ol>
  <hr/>
