@@ -5,8 +5,8 @@
 - If you wish to recreate the database, open the terminal to the directory of this repository and run the following commands:
 -   ```
     sqlite3 project.db
-      sqlite> .read dropCreate.sql
-      sqlite> .read addData.sql
+    sqlite> .read dropCreate.sql
+    sqlite> .read addData.sql
     ```
 ## Interface
 - download this repository
