@@ -21,6 +21,7 @@ INSERT INTO characters
 VALUES (10, 'Cloud');
 
 
+
 -- Table: player
 INSERT INTO player
 VALUES ('jtg8se', 'Jordan', 'Goode', 'jordan456',4,1);
@@ -30,12 +31,6 @@ INSERT INTO player
 VALUES ('eh2vu', 'Ethan','Hartley','ethan',4,3);
 INSERT INTO player
 VALUES ('sh3rt', 'Sophia', 'Harrington', 'sophie',2,4);
-INSERT INTO player
-VALUES ('bw2yz', 'Benjamin','Walker','benji',3,5);
-INSERT INTO player
-VALUES ('om5wt', 'Olivia','Morgan','olivia',2,6);
-INSERT INTO player
-VALUES ('gl3tp', 'Gabriel', 'Lawson', 'gabby',1,7);
 INSERT INTO player
 VALUES ('aw5pr', 'Ava','West','ava22',2,8);
 INSERT INTO player
@@ -56,7 +51,7 @@ VALUES (126, 60, 'aw5pr','jgk2qq',2);
 INSERT INTO game
 VALUES (127, 60, 'np8rq','sg2vp',3);
 INSERT INTO game
-VALUES (128, 60, 'jtg8se','bw2yz',3);
+VALUES (128, 60, 'jtg8se','np8rq',3);
 INSERT INTO game
 VALUES (129, 60, 'np8rq','jgk2qq',4);
 INSERT INTO game
@@ -68,7 +63,7 @@ VALUES (132, 60, 'aw5pr','jgk2qq',2);
 INSERT INTO game
 VALUES (133, 60, 'joan','jgk2qq',3);
 INSERT INTO game
-VALUES (134, 60, 'bw2yz','joan',4);
+VALUES (134, 60, 'aw5pr','joan',4);
 
 
 
@@ -100,3 +95,32 @@ INSERT INTO player_attendance
 VALUES (5, 'jtg8se',2);
 INSERT INTO player_attendance
 VALUES (6, 'joan',2);
+
+INSERT INTO player_attendance
+VALUES (7, 'sg2vp', 1);
+INSERT INTO player_attendance
+VALUES (8, 'sg2vp',2);
+INSERT INTO player_attendance
+VALUES (9, 'sg2vp',3);
+
+INSERT INTO player_attendance
+VALUES (10, 'eh2vu',2);
+INSERT INTO player_attendance
+VALUES (11, 'eh2vu',3);
+INSERT INTO player_attendance
+VALUES (12, 'eh2vu',4);
+
+INSERT INTO player_attendance
+VALUES (13, 'sh3rt',2);
+INSERT INTO player_attendance
+VALUES (14, 'sh3rt',4);
+INSERT INTO player_attendance
+VALUES (15, 'sh3rt',1);
+
+INSERT INTO player_attendance
+VALUES (16, 'aw5pr',3);
+INSERT INTO player_attendance
+VALUES (17, 'aw5pr',1);
+INSERT INTO player_attendance
+VALUES (18, 'aw5pr',2);
+

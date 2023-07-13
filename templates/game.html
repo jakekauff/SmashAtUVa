@@ -7,13 +7,18 @@
 </head>
 <nav class="navigation-bar">
     <img src="{{url_for('static', filename='smashLogo.png')}}"  style="width:100px;height:75px;"/>
-    <h2>Game <b>{{game_info[0]}}</b> Information:</h2>
+    <a href="/" >Home</a>
+    <a href="/get-tournaments" >League Tournaments</a>
+    <a href="/get-players">Player Information</a>
+    <a href="/get-games">Head-to-Heads</a>
+    <a href="/character">Smash Characters List</a>
+    <a href="/about">About UVa Smash Club</a>
 </nav>
 <body>
-    <br/>
+<h2 style="color:Black;">Game <b>{{game_info[0]}}</b> Information:</h2>
     <h3>Game Duration: </h3>{{game_info[1]}}
-    <h3>Game Winner:</h3> <a href="/player/{{game_info[2]}}"> {{game_info[3]}}  </a>
-    <h3>Game Loser: </h3> <a href="/player/{{game_info[3]}}"> {{game_info[4]}}  </a>
+    <h3>Game Winner:</h3> <a href="/player/{{game_info[2]}}"> {{game_info[2]}}  </a>
+    <h3>Game Loser: </h3> <a href="/player/{{game_info[3]}}"> {{game_info[3]}}  </a>
     <h3>Game Tournament:</h3> <a href="/tournament/{{game_info[4]}}">Tournament {{game_info[4]}}  </a>
     <br/>
 </body>

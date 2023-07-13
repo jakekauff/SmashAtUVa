@@ -5,25 +5,36 @@
 </head>
 <nav class="navigation-bar">
     <img src="{{url_for('static', filename='smashLogo.png')}}"  style="width:100px;height:75px;"/>
-     <h2>Player Information for <b>{{player_info[0]}} {{player_info[2]}}</b> </h2>
+    <a href="/" >Home</a>
+    <a href="/get-tournaments" >League Tournaments</a>
+    <a href="/get-players">Player Information</a>
+    <a href="/get-games">Head-to-Heads</a>
+    <a href="/character">Smash Characters List</a>
+    <a href="/about">About UVa Smash Club</a>
 </nav>
 <body>
+    <h2 style="color:Black;"><b>{{player_info[1]}} {{player_info[2]}}</b> </h2>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Computing ID</th>
+            <th>Character</th>
+        </tr>
+        <tr>
+            <td>{{player_info[1]}} {{player_info[2]}}</td>
+            <td>{{player_info[0]}}</td>
+            <td>{{characters[0][1]}}</td>
+        </tr>
+    </table>
+    <br/>
 
-    <br/>
-    <h3> Player Email: </h3> {{player_info[3]}}
-    <br/>
-    <h3>Player Year: </h3>{{player_info[4]}}
-    <br/>
-    <h3>Player Character:</h3> {{characters[1]}}
-        <a href="http://127.0.0.1:5000/character/{{characters[0]}}">{{characters[1]}} </a>
-    <br/>
-    <h3>Tournaments attended by {{player_info[0]}}:</h3>
+    <h3>Tournaments attended:</h3>
     <ol>
         {% for i in attendance %}
             <li><a href="http://127.0.0.1:5000/tournament/{{i[0]}}">Tournament #{{i[0]}} </a></li>
         {% endfor %}
     </ol>
-    <h3>Head-to-Heads played in by {{player_info[0]}}:</h3>
+    <h3>Head-to-Heads</h3>
     <h4>Wins:</h4>
     <ol>
     {% for i in wins %}
