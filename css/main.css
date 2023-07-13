@@ -33,6 +33,7 @@ tr:hover {
 th, td {
   border-color: black;
 }
+
 table, th, td {
   border: 1px solid;
 }
@@ -93,4 +94,5 @@ html {
 body {
     display: table-cell;
     vertical-align: middle;
+    border: 20px;
 }

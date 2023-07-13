@@ -2,32 +2,49 @@
 <html>
 <nav class="navigation-bar">
     <img src="{{url_for('static', filename='smashLogo.png')}}"  style="width:100px;height:75px;"/>
-    <h2>Tournament <b>{{tournament_info[0]}}</b> Information:</h2>
+
+    <a href="/" >Home</a>
+    <a href="/get-tournaments" >League Tournaments</a>
+    <a href="/get-players">Player Information</a>
+    <a href="/get-games">Head-to-Heads</a>
+    <a href="/character">Smash Characters List</a>
+    <a href="/about">About UVa Smash Club</a>
 </nav>
 <head>
     <link rel="stylesheet" href='/css/main.css' />
 </head>
 <body>
-
-    <br/>
+ <hr/>
+    <h2 style="color:black;">Tournament <b>{{tournament_info[0]}}</b> Information:</h2>
     Tournament Date: {{tournament_info[1]}}
     <br/>
     Tournament Location: {{tournament_info[3]}}
     <br/>
-    Top 3 Players:
+    <h4 >Top 3 Players:</h4>
     <ol>
         <li><a href="/player/{{tournament_info[4]}}">{{tournament_info[4]}} </a> </li>
         <li><a href="/player/{{tournament_info[5]}}">{{tournament_info[5]}} </a> </li>
         <li><a href="/player/{{tournament_info[6]}}">{{tournament_info[6]}} </a> </li>
     </ol>
-    <br/>
-    Players in Attendance:
+  <hr/>
+    <h4>Players in Attendance:</h4>
     <ol>
         {% for i in attendance %}
             <li><a href="http://127.0.0.1:5000/player/{{i[0]}}">{{i[0]}}</a></li>
         {% endfor %}
-    <br/>
-    Tournament Organizer Information: %TODO
-        <hr/>
+    </ol>
+ <hr/>
+        <br/>
+    <h4>Organizer Contact Info:</h4>
+ <ol>
+     <li><a href="http://127.0.0.1:5000/player/{{tournament_info[9]}}">{{tournament_info[10]}} {{tournament_info[11]}}</a></li>
+     </li>{{tournament_info[12]}}</li>
+     </li>{{tournament_info[13]}}</li>
+ </ol>
+
+
+
+
+
 </body>
 </html>

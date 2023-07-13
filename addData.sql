@@ -36,61 +36,63 @@ VALUES ('aw5pr', 'Ava','West','ava22',2,8);
 INSERT INTO player
 VALUES ('np8rq', 'Noah','Price','noah',3,9);
 INSERT INTO player
-VALUES ('joan', 'Joan','Darwin','joan',3,10);
+VALUES ('joan', 'Joan','Darwin','jd5tp',3,10);
 
 -- Table: game
 INSERT INTO game 
-VALUES (123, 60, 'jtg8se','jgk2qq',1);
+VALUES (123, 60, 'jtg8se','eh2vu',1);
 INSERT INTO game 
-VALUES (124, 60, 'joan','jgk2qq',1);
+VALUES (124, 60, 'joan','sh3rt',1);
 INSERT INTO game 
-VALUES (125, 60, 'jtg8se','joan',2);
+VALUES (125, 60, 'jtg8se','jd5tp',2);
 
 INSERT INTO game
-VALUES (126, 60, 'aw5pr','jgk2qq',2);
+VALUES (126, 60, 'aw5pr','sh3rt',2);
 INSERT INTO game
 VALUES (127, 60, 'np8rq','sg2vp',3);
 INSERT INTO game
 VALUES (128, 60, 'jtg8se','np8rq',3);
 INSERT INTO game
-VALUES (129, 60, 'np8rq','jgk2qq',4);
+VALUES (129, 60, 'np8rq','eh2vu',4);
 INSERT INTO game
 VALUES (130, 60, 'eh2vu','sg2vp',4);
 INSERT INTO game
-VALUES (131, 60, 'np8rq','joan',1);
+VALUES (131, 60, 'np8rq','jd5tp',1);
 INSERT INTO game
-VALUES (132, 60, 'aw5pr','jgk2qq',2);
+VALUES (132, 60, 'aw5pr','sg2vp',2);
 INSERT INTO game
-VALUES (133, 60, 'joan','jgk2qq',3);
+VALUES (133, 60, 'jd5tp','aw5pr',3);
 INSERT INTO game
-VALUES (134, 60, 'aw5pr','joan',4);
+VALUES (134, 60, 'aw5pr','jd5tp',4);
 
 
 
 
 -- Table: tournament
 INSERT INTO tournament 
-VALUES (1, 20, '2023-7-1','Rice Hall','jtg8se','bw2yz','jgk2qq',1);
+VALUES (1, 20, '2023-7-1','Rice Hall','jtg8se','bw2yz','jd5tp',1);
 INSERT INTO tournament 
-VALUES (2, 20, '2023-7-8','Newcomb','np8rq','jtg8se','joan',1);
+VALUES (2, 20, '2023-7-8','Newcomb','np8rq','jtg8se','jd5tp',1);
 INSERT INTO tournament
-VALUES (3, 20, '2023-6-10','Rice Hall','jtg8se','eh2vu','jgk2qq',1);
+VALUES (3, 20, '2023-6-10','Rice Hall','jtg8se','eh2vu','sg2vp',1);
 INSERT INTO tournament
-VALUES (4, 20, '2023-6-17','Olsson Hall','jgk2qq','aw5pr','sg2vp',1);
+VALUES (4, 20, '2023-6-17','Olsson Hall','jd5tp','aw5pr','sg2vp',1);
 
 -- Table: club_officer
 INSERT INTO club_officer
 VALUES (1, 'jtg8se', 'Jordan','Goode','4345551234','jtg8se@virginia.edu',4);
 
 -- Table: player_attendance
+
 INSERT INTO player_attendance
-VALUES (1, 'jgk2qq', 1);
+VALUES (1, 'aw5pr',1);
+
 INSERT INTO player_attendance
 VALUES (2, 'jtg8se',1);
 INSERT INTO player_attendance
 VALUES (3, 'joan',1);
 INSERT INTO player_attendance
-VALUES (4, 'jgk2qq',2);
+VALUES (4, 'aw5pr',2);
 INSERT INTO player_attendance
 VALUES (5, 'jtg8se',2);
 INSERT INTO player_attendance
@@ -119,8 +121,5 @@ VALUES (15, 'sh3rt',1);
 
 INSERT INTO player_attendance
 VALUES (16, 'aw5pr',3);
-INSERT INTO player_attendance
-VALUES (17, 'aw5pr',1);
-INSERT INTO player_attendance
-VALUES (18, 'aw5pr',2);
+
 

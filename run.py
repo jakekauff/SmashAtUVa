@@ -28,11 +28,14 @@ def class_(TourneyNum):
     connection_obj = sqlite3.connect('project.db')
     cursor_obj = connection_obj.cursor()
 
-    cursor_obj.execute(f"SELECT * FROM tournament WHERE TourneyNum = {TourneyNum} LIMIT 1")
+    cursor_obj.execute(f"SELECT * FROM tournament INNER JOIN club_officer ON tournament.OfficerID = club_officer.OfficerID WHERE TourneyNum = {TourneyNum}")
     tournament_info = cursor_obj.fetchone()
 
     cursor_obj.execute(f"SELECT ComputingID FROM player_attendance WHERE TourneyNum = {TourneyNum}")
     attendance = cursor_obj.fetchall()
+
+    print(tournament_info[7])
+
 
     if tournament_info is None:
         return "Tournament not found"
